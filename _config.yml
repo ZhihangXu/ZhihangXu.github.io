@@ -55,21 +55,6 @@ kramdown:
 
 
 
-# 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
-
-# Gitalk
-# gitalk:
-#   enable: true    #是否开启Gitalk评论
-#   clientID: 04a54eb228bc8b62d92c                            #生成的clientID
-#   clientSecret: 28429f91c7262a8eb79bc83f2cf3ad54b95d1272    #生成的clientSecret
-#   repo: Chord-Chen-30.github.io    #仓库名称
-#   owner: Chord-Chen-30    #github用户名
-#   admin: Chord-Chen-30
-#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
 
 comments:
   disqus: false
