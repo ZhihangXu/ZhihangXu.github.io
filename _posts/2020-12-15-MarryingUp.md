@@ -41,9 +41,9 @@ https://arxiv.org/abs/1805.05588
 
 ## 在不同 level 融合RE和NN（主要工作）
 
-1. **Base line 选取**：双向 LSTM，得到每个单词的hidden state $h_i$， 再把每个单词hidden state加权求和。
+1. **Base line 选取**：双向 LSTM，得到每个单词的hidden state $h_i$， 再把每个单词hidden state加权求和：
 
-$$ s = \sum_i \alpha_i h_i \tag{1} $$, 
+$$s = \sum_i \alpha_i h_i \tag{1}$$
 
 $\alpha_i$是这样算出来的：
 
@@ -88,4 +88,4 @@ $$logit_k = logit_k^{'}(RNN\_logit) + w_k z_k \tag{7}$$
 $z-k$ 非0即1，零代表不曾有RE给这个句子分类为k，1代表至少有一个RE给这个句子分类为类别k。$w_k$是一个trainable weight，代表了RE的confidence，这里不给**各条**RE设置独立的trainable weight是因为一般只会有一些句子会被RE匹配。他们只修改logit而不修改最后的probability原因是，（这不是……差不多一个意思吗）logit是一个没有限制的实数，比概率更好的匹配了$w_k z_k$这一项的数学性质，他们也从实验上发现，修改logit比修改probability效果好。
 
 <br/>
-公式显示有点问题，后面解决一下，还有图床。
+公式显示有点问题，后面解决一下(done)，还有图床。
