@@ -50,27 +50,29 @@ Bidirection RNN (encoder) + Decoder (emulates searching)
 
 ### 3.1 Decoder
 
-先说了decoder，定义关于第$i$个输出target单词的条件概率
+先说了decoder，定义关于第$i$个输出target单词的条件概率：
+    
+    $$p(y_i | y_1, \cdots, y_{i-1}, x) = g(y_{i-1}, s_i, c_i)$$, where
 
-$$p(y_i | y_1, \cdots, y_{i-1}, x) = g(y_{i-1}, s_i, c_i)$$, where
+    $$s_i = f(s_{i-1}, y_{i-1}, c_i)$$, $s_i$是RNN第 $i$ 时刻的hidden state（感觉这里是人为把 $s$ 叫做了hidden state），这样算出来。这个 $g$ 和 $f$ 在paper appendix里面写了详细公式。
 
-​	$$s_i = f(s_{i-1}, y_{i-1}, c_i)$$ $s_i$是RNN第 $i$ 时刻的hidden state（感觉这里是人为把 $s$ 叫做了hidden state），这样算出来。这个 $g$ 和 $f$ 在paper appendix里面写了详细公式。
+    注意这里的 $c_i$ 是针对各个时刻句子context 信息，而不是句子的整体vector。$c_i$由一系列annotations($h_1, \cdots, h_{T_x}$)决定，$h_i$由包含输入句子第 $i$ 个位置附近的东西的信息。(这个$h$ 其实就是Bi-RNN hidden states的 concatenation，3.2说)
 
-注意这里的 $c_i$ 是针对各个时刻句子context 信息，而不是句子的整体vector。$c_i$由一系列annotations($h_1, \cdots, h_{T_x}$)决定，$h_i$由包含输入句子第 $i$ 个位置附近的东西的信息。(这个$h$ 其实就是Bi-RNN hidden states的 concatenation，3.2说)
+    $c_i = \sum_{j=1}^{T_x} \alpha_{ij}h_j$​,  $\alpha_{ij}$就是对应$h_j$的权重，$T_x$ 指句子$x$的长度。
 
-$c_i = \sum_{j=1}^{T_x} \alpha_{ij}h_j$​,  $\alpha_{ij}$就是对应$h_j$的权重，$T_x$ 指句子$x$的长度。
+    $$\alpha_{ij} = \frac{exp(e_{ij})}{\sum_{k=1}^{T_x}exp(e_{ik})}$$, 
 
-$$\alpha_{ij} = \frac{exp(e_{ij})}{\sum_{k=1}^{T_x}exp(e_{ik})}$$, 
+    $$e_{ij} = a(s_{i-1}, h_j)$$ ，$a$ 是一个网络
 
-$$e_{ij} = a(s_{i-1}, h_j)$$ ，$a$ 是一个网络
+    对$e_{ij}$直观的解释：他衡量了input句子 $j$ 位置与output句子 $i$ 位置对照的好不好，由RNN第 $i-1$ 个hidden state和第 $j$ 个annotation计算出来。这里的 $a()$ 是一个神经网络，训练方法是 “which is jointly trained with all the other components of the proposed system.” （==没看懂==）。这里与以往不同的是，原句子和目标句子的对齐的这个指标不再是隐变量（还没想好怎么翻译latent variable这个词更好），这个model直接计算出一个soft的alignment。后面paper里给出了较为直观的解释：可以理解为计算annotations的一个加权和，作为expected annotation，这个期望是在可能的alignments上的。$\alpha_{ij}$ 就可以理解成一个单词 $y_i$ 是由 $x_j$ 翻译而来的概率，换句话说就是他们两个是“对齐”的。第 $i$ 个context vector $c_i$ 也就是用 $\alpha$ 这样加权求和算出来的了。
 
-对$e_{ij}$直观的解释：他衡量了input句子 $j$ 位置与output句子 $i$ 位置对照的好不好，由RNN第 $i-1$ 个hidden state和第 $j$ 个annotation计算出来。这里的 $a()$ 是一个神经网络，训练方法是 “which is jointly trained with all the other components of the proposed system.” （==没看懂==）。这里与以往不同的是，原句子和目标句子的对齐的这个指标不再是隐变量（还没想好怎么翻译latent variable这个词更好），这个model直接计算出一个soft的alignment。后面paper里给出了较为直观的解释：可以理解为计算annotations的一个加权和，作为expected annotation，这个期望是在可能的alignments上的。$\alpha_{ij}$ 就可以理解成一个单词 $y_i$ 是由 $x_j$ 翻译而来的概率，换句话说就是他们两个是“对齐”的。第 $i$ 个context vector $c_i$ 也就是用 $\alpha$ 这样加权求和算出来的了。
-
-$\alpha_{ij}$（或者说$e_{ij}$） 也就反映了annotation $h_j$ 连同 $s_{i-1}$ 在决定下一个state $s_i$ 和生成 $y_i$ 的重要程度。直觉上看，这里就在decoder内部实现了一个attention，这个decoder决定了翻译时要注重source sentence的哪个部分。以此减轻encoder的工作负担（将一个句子encode到一个fixed-length vector），
+    $\alpha_{ij}$（或者说$e_{ij}$） 也就反映了annotation $h_j$ 连同 $s_{i-1}$ 在决定下一个state $s_i$ 和生成 $y_i$ 的重要程度。直觉上看，这里就在decoder内部实现了一个attention，这个decoder决定了翻译时要注重source sentence的哪个部分。以此减轻encoder的工作负担（将一个句子encode到一个fixed-length vector），
 
 ### 3.2 Encoder (bidirectional RNN for anntating sequences)
 
-解决之前 $h$ 怎么来的问题。使用双向RNN，$$h_j = [\overrightarrow{h_j}; \overleftarrow{h_j}]$$ ，两个箭头 $h_j$ 分别是双向RNN在读取句子第 $j$ 个时刻的forward 和 backward hidden state。（这么简单还搞得神秘兮兮的）
+解决之前 $h$ 怎么来的问题。使用双向RNN，
+    $$h_j = [\overrightarrow{h_j}; \overleftarrow{h_j}]$$ ，
+    两个箭头 $h_j$ 分别是双向RNN在读取句子第 $j$ 个时刻的forward 和 backward hidden state。（这么简单还搞得神秘兮兮的）
 
 ## Experiment Settings
 
