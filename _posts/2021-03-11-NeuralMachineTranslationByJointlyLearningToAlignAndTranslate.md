@@ -18,21 +18,15 @@ tags:
 
 > [1409.0473.pdf (arxiv.org)](https://arxiv.org/pdf/1409.0473.pdf)
 
-
-
 ## Abstract / Motivation
 
 （在2016年）用神经网络做翻译很广泛，但一般做法是用encoder-decoder将输入先encode成一个固定长度的vector，然后decoder从这个vector生成翻译后的文本，这篇paper怀疑这是提升翻译任务性能的一个bottleneck，为解决这个，他们在原有翻译模型上进行扩展，让模型自己搜索与目标词语相关的原句子部分，（为了叙述方便，这里我们假设在做英语-法语的翻译任务），也就是然模型能够自己发现C’est la vie（=That's life.）这句话中 vie对应英文中的life。
-
-
 
 ## Introduction
 
 上述方法中的一个潜在问题就是，神经网络要有**把一个长长的句子中的信息全部压缩到一个固定长度的vector中**的能力，并且句子较长时这招也就不好使了（已有paper证明这点 Cho et al. (2014b）。
 
 解决方法、也是工作重点：“The most important distinguishing feature of this approach from the basic encoder–decoder is that it does not attempt to encode a whole input sentence into a single fixed-length vector. Instead, **it encodes the input sentence into a sequence of vectors and chooses a subset of these vectors adaptively while decoding the translation**”
-
-
 
 ## Backgroud
 
@@ -42,15 +36,15 @@ tags:
 
 用RNN最后一个时刻的hidden state作为context vector $c$，用 $c$ 和前 $t-1$ 时刻的输出作为condition预测第t个单词。（其中一种做法）
 
-
-
 ## Learning to align and translate
 
 Bidirection RNN (encoder) + Decoder (emulates searching)
 
 ### 3.1 Decoder
 
-先说了decoder，定义关于第$i$个输出target单词的条件概率：$$p(y_i | y_1, \cdots, y_{i-1}, x) = g(y_{i-1}, s_i, c_i)$$, where
+$$p(y_i | y_1, \cdots, y_{i-1}, x) = g(y_{i-1}, s_i, c_i)$$
+
+where
 
 $$s_i = f(s_{i-1}, y_{i-1}, c_i)$$, $s_i$是RNN第 $i$ 时刻的hidden state（感觉这里是人为把 $s$ 叫做了hidden state），这样算出来。这个 $g$ 和 $f$ 在paper appendix里面写了详细公式。
 
