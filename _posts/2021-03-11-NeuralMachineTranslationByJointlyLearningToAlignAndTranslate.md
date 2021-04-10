@@ -50,9 +50,7 @@ Bidirection RNN (encoder) + Decoder (emulates searching)
 
 ### 3.1 Decoder
 
-先说了decoder，定义关于第$i$个输出target单词的条件概率：
-    
-$$p(y_i | y_1, \cdots, y_{i-1}, x) = g(y_{i-1}, s_i, c_i)$$, where
+先说了decoder，定义关于第$i$个输出target单词的条件概率：$$p(y_i | y_1, \cdots, y_{i-1}, x) = g(y_{i-1}, s_i, c_i)$$, where
 
 $$s_i = f(s_{i-1}, y_{i-1}, c_i)$$, $s_i$是RNN第 $i$ 时刻的hidden state（感觉这里是人为把 $s$ 叫做了hidden state），这样算出来。这个 $g$ 和 $f$ 在paper appendix里面写了详细公式。
 
