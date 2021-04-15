@@ -83,6 +83,8 @@ $$MultiHead(Q, K, V ) = Concat(head_1, ..., head_h)W^O$$
 
 $$head_i = Attention(QW^Q_i , KW^K_i , VW^V_i )$$
 
+and
+
 ​$$W^Q_i, W^K_i \in R^{d_{model} \times d_k}, W^V_i \in R^{d_{model} \times d_v}, W^O \in R^{hd_v \times d_{model}}$$
 
 ​取值：$d_k = d_v = d_{model} / h = 64， h=8$
