@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Attention
+title:      Attention Is All You Need
 subtitle:    "第一次看着实不好懂"
 date:       2021-4-15
 author:     Chen Zhuo
@@ -79,11 +79,13 @@ Google 把这个叫做Scaled Dot-Product Attention的东西，其实就是上面
 
 $$MultiHead(Q, K, V ) = Concat(head_1, ..., head_h)W^O$$
 
-​	$$where \text{ } head_i = Attention(QW^Q_i , KW^K_i , VW^V_i )$$
+​where 
 
-​	$$W^Q_i, W^K_i \in R^{d_{model} \times d_k}, W^V_i \in R^{d_{model} \times d_v}, W^O \in R^{hd_v \times d_{model}}$$
+$$head_i = Attention(QW^Q_i , KW^K_i , VW^V_i )$$
 
-​	取值：$d_k = d_v = d_{model} / h = 64， h=8$
+​$$W^Q_i, W^K_i \in R^{d_{model} \times d_k}, W^V_i \in R^{d_{model} \times d_v}, W^O \in R^{hd_v \times d_{model}}$$
+
+​取值：$d_k = d_v = d_{model} / h = 64， h=8$
 
 ----
 
