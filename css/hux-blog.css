@@ -498,7 +498,7 @@ pre code {
 .intro-header {
   background: no-repeat center center;
   background-color: #808080;
-  background-attachment: scroll;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -518,6 +518,8 @@ pre code {
   padding: 85px 0 55px;
   color: white;
 }
+
+/* found this padding actually useful --chen */
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
@@ -525,12 +527,15 @@ pre code {
     padding: 150px 0;
   }
 }
+
+/* found this padding actually useful --chen */
 .intro-header .site-heading {
   padding: 95px 0 70px;
 }
+
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading {
-    padding: 150px 0;
+    padding: 300px 0;
   }
 }
 .intro-header .site-heading,
