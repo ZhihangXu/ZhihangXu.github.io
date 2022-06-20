@@ -4,7 +4,7 @@ title:      Huggingface 库的一些细节用法
 subtitle:    "经常用，放在这查方便"
 date:       2022-6-20
 author:     Chen Zhuo
-header-img: img/2022-6-20.jpg
+header-img: img/2022-6-20.png
 catalog: true
 tags:
     - Notes
