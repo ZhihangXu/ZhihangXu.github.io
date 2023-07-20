@@ -62,7 +62,7 @@ $$e_{ij} = a(s_{i-1}, h_j)$$
 
 $a$ 是一个网络
 
-对$e_{ij}$直观的解释：他衡量了input句子 $j$ 位置与output句子 $i$ 位置对照的好不好，由RNN第 $i-1$ 个hidden state和第 $j$ 个annotation计算出来。这里的 $a()$ 是一个神经网络，训练方法是 “which is jointly trained with all the other components of the proposed system.” （==没看懂==）。这里与以往不同的是，原句子和目标句子的对齐的这个指标不再是隐变量（还没想好怎么翻译latent variable这个词更好），这个model直接计算出一个soft的alignment。后面paper里给出了较为直观的解释：可以理解为计算annotations的一个加权和，作为expected annotation，这个期望是在可能的alignments上的。$\alpha_{ij}$ 就可以理解成一个单词 $y_i$ 是由 $x_j$ 翻译而来的概率，换句话说就是他们两个是“对齐”的。第 $i$ 个context vector $c_i$ 也就是用 $\alpha$ 这样加权求和算出来的了。
+对$e_{ij}$直观的解释：他衡量了input句子 $j$ 位置与output句子 $i$ 位置对照的好不好，由RNN第 $i-1$ 个hidden state和第 $j$ 个annotation计算出来。这里的 $a()$ 是一个神经网络，跟随其余网络参数一同训练。这里与以往不同的是，原句子和目标句子的对齐的这个指标不再是隐式的，这个model直接计算出一个soft的alignment。后面paper里给出了较为直观的解释：可以理解为计算annotations的一个加权和，作为expected annotation，这个期望是在可能的alignments上的。$\alpha_{ij}$ 就可以理解成一个单词 $y_i$ 是由 $x_j$ 翻译而来的概率，换句话说就是他们两个是“对齐”的。第 $i$ 个context vector $c_i$ 也就是用 $\alpha$ 这样加权求和算出来的了。
 
 $\alpha_{ij}$（或者说$e_{ij}$） 也就反映了annotation $h_j$ 连同 $s_{i-1}$ 在决定下一个state $s_i$ 和生成 $y_i$ 的重要程度。直觉上看，这里就在decoder内部实现了一个attention，这个decoder决定了翻译时要注重source sentence的哪个部分。以此减轻encoder的工作负担（将一个句子encode到一个fixed-length vector），
 
