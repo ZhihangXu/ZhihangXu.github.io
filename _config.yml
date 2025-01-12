@@ -6,7 +6,7 @@ email: chenzhuo@shanghaitech.edu.cn
 description: "More than blogs"
 keyword: "CZ, Chen Zhuo Blog, 陈卓的博客"
 url: "http://Chord-Chen-30.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "https://chord-chen-30.github.io/blog/"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Chord-Chen-30/Chord-Chen-30.github.io.git" # you code repository
 
 # Sidebar settings
