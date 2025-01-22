@@ -31,6 +31,8 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 - [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
 **Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
 
+- [Exploring Knowledge Boundaries in Large Language Models for Retrieval Judgment](https://arxiv.org/abs/2411.06207).
+Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. Preprint
 
 - [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
 **Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing
@@ -49,11 +51,11 @@ My research focuses on Natural Language Processing (NLP). Recently, I'm doing re
 
 # 🎖 Honors and Awards
 - 2024 ShanghaiTech Outstanding Student
-- 2021 ShanghaiTech Outstanding Graduate (Top 10\%)
-- 2019-2020 Third Prize of ShanghaiTech University Scholarship (Top 8\%)
-- 2019-2020 Outstanding Student: For outstanding students who had contribution to the University (Top 10\%)
-- 2019 MCM Meritorious Winner (Top 7.09\%)
-- 2018-2019 Second Prize of ShanghaiTech University Scholarship (Top 5\%)
+- 2021 ShanghaiTech Outstanding Graduate (Top 10%)
+- 2019-2020 Third Prize of ShanghaiTech University Scholarship (Top 8%)
+- 2019-2020 Outstanding Student: For outstanding students who had contribution to the University (Top 10%)
+- 2019 MCM Meritorious Winner (Top 7.09%)
+- 2018-2019 Second Prize of ShanghaiTech University Scholarship (Top 5%)
 
 
 
