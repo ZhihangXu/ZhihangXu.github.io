@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Zhuo Chen"
-description              : "Ph.D. student at ShanghaiTech University"
-repository               : "Chord-Chen-30/Chord-Chen-30.github.io"
+title                    : "Zhihang Xu"
+description              : "Post Doc. at University of Houston"
+repository               : "https://zhihangxu.github.io/"
 google_scholar_stats_use_cdn : false
 
 # google analytics
@@ -22,14 +22,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Zhuo Chen"
+  name             : "Zhihang Xu"
   avatar           : "images/photo.JPG"
-  bio              : "ShanghaiTech Univ."
+  bio              : "Univ. of Houston"
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=zFqs8PUAAAAJ"
-  email            : "chenzhuo@shanghaitech.edu.cn"
+  email            : "zhihang.xu.1022@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -38,7 +38,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Chord-Chen-30"
+  github           : "ZhihangXu"
   google_plus      :
   keybase          :
   instagram        :
