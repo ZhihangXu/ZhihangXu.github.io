@@ -17,11 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<!-- Hi! I'm Zhuo Chen (陈卓), a Ph.D. student at ShanghaiTech University, supervised by Prof. Kewei Tu.
+<!-- Hi! I'm Zhihang (徐之航), a Post-doc working at University of Houston, mentored by Prof. Min Wang.
 
 My research focuses on Natural Language Processing (NLP). Recently, I'm doing reasearch related to (Multimodal) LLMs and RAG at Tongyi Lab, Alibaba. -->
 
-Hi! I'm Zhihang Xu (徐之航). To be continued...
+Hi! I'm Zhihang Xu (徐之航), a Post-doc working at University of Houston, mentored by Prof. Min Wang.
 
 <!-- 
 # 🔥 News
@@ -29,16 +29,15 @@ Hi! I'm Zhihang Xu (徐之航). To be continued...
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 📝 Publications 
+- [An adaptive Gaussian process method for multi-modal Bayesian inverse problems](https://arxiv.org/abs/2409.15307 )
+**Z. Xu**, X. Zhu, D. Li and Q. Liao. 
 
-- [Improving Retrieval Augmented Open-Domain Question-Answering with Vectorized Contexts](https://aclanthology.org/2024.findings-acl.458/).
-**Zhuo Chen**, Xinyu Wang, Yong Jiang, Pengjun Xie, Fei Huang, Kewei Tu. In Findings of the Association for Computational Linguistics ACL 2024
 
-- [Exploring Knowledge Boundaries in Large Language Models for Retrieval Judgment](https://arxiv.org/abs/2411.06207).
-Zhen Zhang, Xinyu Wang, Yong Jiang, **Zhuo Chen**, Feiteng Mu, Mengting Hu, Pengjun Xie, Fei Huang. Preprint
+- Domain-decomposed Bayesian inversion based on local Karhunen-Loève expansions
+**Z.Xu**, Q. Liao, J. Li. Journal of Computational Physics, vol. 504, p. 112856, 2024
 
-- [Using Interpretation Methods for Model Enhancement](https://aclanthology.org/2023.emnlp-main.28/).
-**Zhuo Chen**, Chengyue Jiang, and Kewei Tu. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing
-
+-  A domain-decomposed VAE method for Bayesian inverse problems
+**Z. Xu**, Y. Xia, and Q. Liao. International journal for uncertainty quantification,  vol. 14, no. 3, p. 67-95, 2024
 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
