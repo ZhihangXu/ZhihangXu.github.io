@@ -77,7 +77,10 @@ A. Mojamder, **Z.Xu**, M. Wang, and  I. Timofeyev
 - 2016 Meritorious Winner of Mathematical Contest In Modeling
 - 2013-2017 Scholarship of Zhejiang Sci-Tech University 
 # Teaching 
-
+- Instructor @ UH, Discrete mathematics (undergraduate), Fall 2024
+- TA @ SHTU, Matrix computations (graduate), Fall 2020
+- TA @ SHTU, Computational science and engineering (undergraduate), Fall 2019 
+- TA @ SHTU, Machine Learning (graduate), Spring 2019 
 
 # 📖 Educations
 - *2017-2023*, ShanghaiTech University, Ph.D. in Computer Science, supervised by Prof. Qifeng Liao. 
