@@ -68,14 +68,14 @@ A. Mojamder, **Z.Xu**, M. Wang, and  I. Timofeyev
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
-- 2024 ShanghaiTech Outstanding Student
-- 2021 ShanghaiTech Outstanding Graduate (Top 10%)
-- 2019-2020 Third Prize of ShanghaiTech University Scholarship (Top 8%)
-- 2019-2020 Outstanding Student: For outstanding students who had contribution to the University (Top 10%)
-- 2019 MCM Meritorious Winner (Top 7.09%)
-- 2018-2019 Second Prize of ShanghaiTech University Scholarship (Top 5%)
-
-
+- 2025 Travel Supprot,  2025 Research Collaboration Workshop in Science of Data and Mathematics (WiSDM) on Diffusion Generative Models for Inverse Problems in Imaging
+- 2025 Travel Support, AWM (Association for Women in Mathematics), AWM Research Symposium
+- 2025 Travel Support, ICERM (Institute for Computational and Experimental Research in Mathematics), Computational Learning for Model Reduction Workshop
+- 2017-2022 Academic scholarship of ShanghaiTech University
+- 2021 Outstanding TA of ShanghaiTech University
+- 2017 Excellent graduate of Zhejiang Sci-Tech University
+- 2016 Meritorious Winner of Mathematical Contest In Modeling
+- 2013-2017 Scholarship of Zhejiang Sci-Tech University 
 # Teaching 
 
 
