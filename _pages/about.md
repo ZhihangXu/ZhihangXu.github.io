@@ -40,13 +40,13 @@ Hi! I'm Zhihang Xu (徐之航), a Post-doc working at University of Houston, men
 **Z. Xu**, Y. Xia, and Q. Liao. International journal for uncertainty quantification,  vol. 14, no. 3, p. 67-95, 2024
 
 
-- [Deep neural network based adaptive learning for switched systems] (https://www.aimsciences.org/article/doi/10.3934/dcdss.2023066)
+- [Deep neural network based adaptive learning for switched systems](https://www.aimsciences.org/article/doi/10.3934/dcdss.2023066)
 - J.He, **Z. Xu**, and Q.Liao. Discrete and Continuous Dynamical Systems, Series S. vol. 16, no. 7, p. 1827-1855, 2023  
 
 - [Gaussian process based expected information gain computation for Bayesian optimal design](https://www.mdpi.com/1099-4300/22/2/258)
-- **Z.Xu**, and Q. Liao. \textit{Entropy}, vol. 22, no. 2, p. 258, 2020 
+- **Z.Xu**, and Q. Liao. Entropy, vol. 22, no. 2, p. 258, 2020 
 
-- [More asymptotic expansions for the Barnes $G$-function] (https://www.sciencedirect.com/science/article/pii/S0022314X17300057)
+- [More asymptotic expansions for the Barnes $G$-function](https://www.sciencedirect.com/science/article/pii/S0022314X17300057)
 - **Z.Xu**, and W. Wang. Journal of Number Theory , vol. 174, pp. 505–517, 2017 
 
 ##  In preparation
