@@ -29,14 +29,14 @@ Hi! I'm Zhihang Xu (徐之航), a Post-doc working at University of Houston, men
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # 📝 Publications 
-- [An adaptive Gaussian process method for multi-modal Bayesian inverse problems](https://arxiv.org/abs/2409.15307).
+- [An adaptive Gaussian process method for multi-modal Bayesian inverse problems](https://arxiv.org/abs/2409.15307)
 **Z. Xu**, X. Zhu, D. Li and Q. Liao. 
 
 
-- [Domain-decomposed Bayesian inversion based on local Karhunen-Loève expansions](https://www.sciencedirect.com/science/article/abs/pii/S0021999124001050).
+- [Domain-decomposed Bayesian inversion based on local Karhunen-Loève expansions](https://www.sciencedirect.com/science/article/abs/pii/S0021999124001050)
 **Z.Xu**, Q. Liao, and J. Li. Journal of Computational Physics, vol. 504, p. 112856, 2024
 
-- [A domain-decomposed VAE method for Bayesian inverse problems](https://www.dl.begellhouse.com/journals/52034eb04b657aea,5c40dbf8319223e2,59ab442e11a7dd59.html).
+- [A domain-decomposed VAE method for Bayesian inverse problems](https://www.dl.begellhouse.com/journals/52034eb04b657aea,5c40dbf8319223e2,59ab442e11a7dd59.html)
 **Z. Xu**, Y. Xia, and Q. Liao. International journal for uncertainty quantification,  vol. 14, no. 3, p. 67-95, 2024
 
 
