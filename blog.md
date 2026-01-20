@@ -1,12 +1,8 @@
 ---
-layout: page
+layout: posts
 title: Research Notes
 permalink: /blog/
+author_profile: false
 ---
 
-This page collects my paper reading notes and technical thoughts.
-
-{% for post in site.posts %}
-- **{{ post.date | date: "%Y-%m-%d" }}**  
-  [{{ post.title }}]({{ post.url }})
-{% endfor %}
+Here are my paper reading notes and technical thoughts.
