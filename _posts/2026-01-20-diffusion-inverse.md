@@ -2,7 +2,10 @@
 layout: post
 title: "Notes on Diffusion Models as Plug-and-Play Priors"
 date: 2026-01-20
-tags: [diffusion, PnP, inverse-problems, calibration]
+author_profile: false
+toc: true
+read_time: true
+tags: [diffusion, inverse-problems]
 ---
 
 ## Paper
