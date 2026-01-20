@@ -15,13 +15,12 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<span class="anchor" id="about-me"></span>
+<span class="anchor" id="publications"></span>
+<span class="anchor" id="honors-awards"></span>
+<span class="anchor" id="educations"></span>
 
 <!-- Hi! I'm Zhihang (徐之航), a Post-doc working at University of Houston, mentored by Prof. Min Wang.
-
-My research focuses on Natural Language Processing (NLP). Recently, I'm doing reasearch related to (Multimodal) LLMs and RAG at Tongyi Lab, Alibaba. -->
-
-Hi! I'm Zhihang Xu (徐之航), a Post-doc working at University of Houston, mentored by Prof. Min Wang.
 
 <!-- 
 # 🔥 News
