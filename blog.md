@@ -3,6 +3,6 @@ layout: posts
 title: Research Notes
 permalink: /blog/
 author_profile: false
+sidebar:
+  nav: false
 ---
-
-Here are my paper reading notes and technical thoughts.
